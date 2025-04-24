@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nehith - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #007BFF; /* Changed to a blue theme */
+        }
+        
+        body {
+            background-color: #f0f4f8; /* Softer background */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #1a1a1a;
+            color: #dcdcdc;
+        }
+        
+        body.dark-mode .card {
+            background-color: #2a2a2a !important;
+            color: #dcdcdc;
+        }
+        
+        body.dark-mode .section-title {
+            border-bottom-color: var(--primary-color);
+        }
+        
+        body.dark-mode .list-group-item {
+            background-color: #2a2a2a !important;
+            color: #dcdcdc;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+        }
+
+        .section-title {
+            border-bottom: 3px solid var(--primary-color); /* Slightly thicker border */
+            padding-bottom: 8px;
+            margin-bottom: 25px;
+        }
+
+        .contact a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        .badge {
+            font-size: 1rem; /* Slightly larger badges */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Nehith</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button id="darkModeToggle" class="btn btn-outline-primary ms-2" onclick="toggleDarkMode()">
+                            🌙 Dark Mode
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container py-4">
+        <header class="mb-4">
+            <h1 class="display-4">Hi, I'm Nehith 👋</h1>
+            <p class="lead">A software developer passionate about building innovative solutions and exploring cutting-edge technologies.</p>
+            <a href="#" class="btn btn-outline-primary">Download Resume</a>
+        </header>
+
+        <section class="about mb-4">
+            <h2 class="section-title">About</h2>
+            <p>I'm a student at Keshav Memorial Institute of Technology, pursuing a Bachelor's degree in Computer Science. I enjoy working on Web3, open-source projects, and creating impactful software solutions.</p>
+        </section>
+
+        <section class="skills mb-4">
+            <h2 class="section-title">Skills</h2>
+            <div class="row g-2">
+                <div class="col-auto"><span class="badge bg-primary">React</span></div>
+                <div class="col-auto"><span class="badge bg-primary">Node.js</span></div>
+                <div class="col-auto"><span class="badge bg-primary">Python</span></div>
+                <div class="col-auto"><span class="badge bg-primary">Docker</span></div>
+            </div>
+        </section>
+
+        <section class="projects mb-4">
+            <h2 class="section-title">My Projects</h2>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title">Neon OSS Kit</h3>
+                            <p class="card-text">Developed an open-source starter kit for developers to build their own open-source projects. The kit includes a complete infrastructure setup with authentication, database, AI embeds, and more.</p>
+                            <p class="card-text"><strong>Technologies:</strong> Next.js, Typescript, PostgreSQL, Prisma, Docker, TailwindCSS</p>
+                            <div class="card-footer bg-transparent border-0">
+                                <a href="#" class="btn btn-sm btn-outline-primary me-2">Website</a>
+                                <a href="#" class="btn btn-sm btn-outline-primary">Source</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact mb-4">
+            <h2 class="section-title">Contact Information</h2>
+            <ul class="list-unstyled">
+                <li class="mb-2">Email: <a href="mailto:nehithcodes@gmail.com">nehithcodes@gmail.com</a></li>
+                <li class="mb-2">Phone: (022) 1234-5678</li>
+                <li class="mb-2">GitHub: <a href="https://github.com/nehithcodes" target="_blank">nehithcodes</a></li>
+                <li class="mb-2">LinkedIn: <a href="https://linkedin.com/in/nehithcodes" target="_blank">Nehith</a></li>
+            </ul>
+        </section>
+
+        <footer class="text-center text-muted">
+            <p>© 2025 Nehith. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
